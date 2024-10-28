@@ -1,0 +1,321 @@
+/* Mobile-First Base Styles */
+*{
+    box-sizing: border-box;
+}
+html {
+    /* background-image: linear-gradient(135deg,  #092b42, #8fb9d1); */
+    background-color: #092b42;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(0, 0, 0, 0.493);
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    line-height: 1.6;
+    position: relative;
+}
+
+body a {
+    color: #C5FCCA;
+}
+
+.summary {
+    margin: 0 3px;
+    /* Corrected margin syntax */
+    line-height: 2;
+    /* Increase this value to create more spacing between lines */
+
+}
+
+/* Header styles */
+header {
+    background-color: rgba(0, 0, 0, 0.212);
+    color: #f0f2F3;
+    text-align: center;
+    padding: 40px;
+    top: 0;
+    z-index: 1000;
+    /* Ensure the header and nav stay above other content */
+}
+
+/* Make the h1 significantly larger than h2 */
+h1 a {
+    font-size: 2.5rem;
+    /* Adjust this size to your liking */
+    margin: 0;
+    color: #fdb338;
+}
+
+/* Make the h2 slightly larger than paragraph text */
+h2 {
+    font-size: 1.2rem;
+    /* Slightly larger than standard paragraph text */
+    margin-top: 10px;
+    /* Add spacing between h1 and h2 */
+    color: lightsteelblue;
+}
+
+#be {
+    display: block;
+    background-color: #10518668;
+    width: 100%;
+    text-align: center;
+
+}
+
+/* Navigation */
+nav {
+    background-color: #10518661;
+    padding: 10px;
+    /* position: sticky; */
+    display: flex;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensure nav items wrap in mobile view */
+    justify-content: center;  /* Center the list items horizontally */
+    align-items: center;      /* Align items vertically */
+    gap: 15px;
+    padding: 0;
+    margin: 0 3px;
+    list-style: none;
+}
+
+nav ul li a{
+    margin: 0 3px;
+    text-align: center;
+    color: #f0f2F3;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+    /* Golden yellow on hover to add emphasis */
+}
+
+#team-results {
+    margin: 20px 0;
+    /* Add margin to create space around the table */
+}
+
+#team-results h2 {
+    text-align: center;
+    /* Center align the heading */
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Remove space between table cells */
+    box-shadow: 0 4px 8px #171c1d;
+    margin-bottom: 20px;
+    background-color: #171c1d;
+    border-radius: 10px;
+    overflow: hidden;
+    /* Ensures the border-radius is applied properly */
+}
+
+/* Table Headers and Cells */
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Lighter borders */
+    backdrop-filter: blur(4px);
+    color: lightpink;
+    /* Golden yellow text for contrast */
+    text-align: center;
+    /* Center align the text */
+}
+
+th {
+    background-color: #000000;
+    text-transform: uppercase;
+    color: #f0f2F3;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.08);
+    /* Slightly different color for alternating rows */
+    color: white;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    /* Add a highlight effect on hover */
+}
+
+/* Gallery Styles */
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* Adjust gallery for mobile */
+    gap: 10px;
+    /* Reduce gap for smaller screens */
+    padding: 10px;
+    /* Ensure padding for smaller screens */
+}
+
+#gallery img {
+    width: 100%;
+    height: auto;
+    /* Ensure images scale and maintain aspect ratio */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#individual-results {
+    margin: 20px 0;
+    /* Add margin to create space around the section */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Make the layout adaptive to screen size */
+    gap: 20px;
+    /* Add space between athlete cards */
+    padding: 20px;
+}
+
+#individual-results h2 {
+    grid-column: 1 / -1;
+    /* Make the heading span across all columns */
+    text-align: center;
+    /* Center align the heading */
+    margin-bottom: 20px;
+}
+
+
+#individual-results .athlete {
+    background-color: rgba(16, 81, 134, 0.8);
+    /* Use a contrasting background color for individual cards */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Add shadow for a card effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+}
+
+#individual-results .athlete:hover {
+    transform: scale(1.03);
+    /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+#individual-results .athlete figure {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#individual-results .athlete img {
+    width: 150px;
+    /* Set consistent size for images */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fdb338;
+    /* Add a border to highlight the image */
+}
+
+#individual-results .athlete figcaption {
+    font-weight: bold;
+    color: #FFD700;
+    /* Use a bright color to emphasize the athlete's name */
+    margin-top: 10px;
+}
+
+#individual-results .athlete dl {
+    margin: 0;
+    padding: 0;
+}
+
+#individual-results .athlete dt {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: lightsteelblue;
+    /* Use light color to differentiate data labels */
+}
+
+#individual-results .athlete dd {
+    margin: 0 0 10px 0;
+    color: #f0f2F3;
+    /* Slightly different shade for values */
+}
+
+#summary .athlete {
+    color: lightskyblue;
+    align-items: center;
+}
+footer{
+    margin: 5px;
+    padding:5%;
+    text-align: center;
+    background-color: #171c1d;
+   
+}
+main {
+    padding: 10px;
+    max-width: 100%;
+    /* Ensure the content fits the mobile screen */
+    margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    #gallery {
+        grid-template-columns: 1fr;
+        /* Display one image per row on smaller screens */
+    }
+
+    table {
+        font-size: 0.9rem;
+        /* Make the table text slightly smaller */
+    }
+
+    th,
+    td {
+        padding: 3% 4%;
+        /* Increase relative padding for smaller screens to improve readability */
+    }
+
+    /* Optional: Remove bottom border of the last td for a cleaner look */
+    /* td:last-child {
+        border-bottom: none;
+    } */
+
+    body {
+        background-color: rgba(0, 0, 0, 0.3);
+        /* Make the overlay slightly lighter on mobile for better visibility */
+    }
+}
